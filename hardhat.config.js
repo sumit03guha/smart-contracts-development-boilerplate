@@ -41,6 +41,7 @@ module.exports = {
      * @description This is the default network for truffle dashboard.
      * There is no need to paste PRIVATE_KEY for deployment. This enables the connection to the
      * MetaMask wallet in the browser from where the contract deployment transcation can be signed.
+     * @see {@link https://trufflesuite.com/docs/truffle/getting-started/using-the-truffle-dashboard/}
      */
     truffle: {
       url: 'http://localhost:24012/rpc',
