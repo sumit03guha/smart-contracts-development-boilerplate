@@ -1,1 +1,27 @@
-{"address":"0x9f7f73DF0476B19ccA5525361641E2e14cD2C4b6","abi":[{"type":"constructor","payable":false,"inputs":[{"type":"string","name":"_greeting"}]},{"type":"function","name":"greet","constant":true,"stateMutability":"view","payable":false,"inputs":[],"outputs":[{"type":"string"}]},{"type":"function","name":"setGreeting","constant":false,"payable":false,"inputs":[{"type":"string","name":"_greeting"}],"outputs":[]}]}
+{
+  "address": "0x9f7f73DF0476B19ccA5525361641E2e14cD2C4b6",
+  "abi": [
+    {
+      "type": "constructor",
+      "payable": false,
+      "inputs": [{ "type": "string", "name": "_greeting" }]
+    },
+    {
+      "type": "function",
+      "name": "greet",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [{ "type": "string" }]
+    },
+    {
+      "type": "function",
+      "name": "setGreeting",
+      "constant": false,
+      "payable": false,
+      "inputs": [{ "type": "string", "name": "_greeting" }],
+      "outputs": []
+    }
+  ]
+}
