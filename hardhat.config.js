@@ -38,6 +38,26 @@ module.exports = {
     },
 
     /**
+     * @summary Network to be used during the smart contract verification.
+     */
+    bsc: {
+      url: 'https://bsc-dataseed.binance.org/',
+      chainId: 56,
+    },
+    bscTestnet: {
+      url: 'https://data-seed-prebsc-1-s1.binance.org:8545',
+      chainId: 97,
+    },
+    rinkeby: {
+      url: 'https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
+      chainId: 4,
+    },
+    mumbai: {
+      url: 'https://matic-mumbai.chainstacklabs.com',
+      chainId: 80001,
+    },
+
+    /**
      * @description This is the default network for truffle dashboard.
      * There is no need to paste PRIVATE_KEY for deployment. This enables the connection to the
      * MetaMask wallet in the browser from where the contract deployment transcation can be signed.
@@ -52,6 +72,6 @@ module.exports = {
    * for the verification of the contracts.
    * */
   etherscan: {
-    apiKey: ETHERSCAN_API_KEY,
+    apiKey: BSCSCAN_API_KEY,
   },
 };

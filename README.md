@@ -10,27 +10,49 @@
 
 ## Hardhat commands
 
-```shell
-npm i
-```
+- Install the boilerplate project dependencies
 
-```shell
-npx hardhat node
-```
+  ```shell
+  npm i
+  ```
 
-```shell
-npx hardhat test --network localhost
-```
+- Instantiate the hardhat local node
 
-```shell
-npx hardhat coverage
-```
+  ```shell
+  npx hardhat node
+  ```
 
-```shell
-npx hardhat run .\scripts\deploy.js --network truffle
-```
+- Run the boilerplate project tests using the local node
 
-```shell
-npx hardhat verify --network NETWORK_NAME DEPLOYED_CONTRACT_ADDRESS "Hello,
-Hardhat!"
-```
+  ```shell
+  npx hardhat test --network localhost
+  ```
+
+- Generate the code coverage report
+
+  ```shell
+  npx hardhat coverage
+  ```
+
+- Instantiate the truffle dashboard
+
+  ```shell
+    truffle dashboard
+  ```
+
+- The browser will open up and then you have to connect with the MetaMask extension. Select the preferred network and the account to deploy the smart contract.
+
+- Deploy the boilerplate project smart contracts using truffle dashboard network
+
+  ```shell
+  npx hardhat run .\scripts\deploy.js --network truffle
+  ```
+
+- Sign the deployment transaction from the MetaMask extension.
+
+- Verify the smart contract using the network on which it was deployed and the smart contract address, alongwith the constructor arguments.
+
+  ```shell
+  npx hardhat verify --network NETWORK_NAME DEPLOYED_CONTRACT_ADDRESS "Hello,
+  Hardhat!"
+  ```
