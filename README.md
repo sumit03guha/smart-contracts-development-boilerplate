@@ -37,7 +37,7 @@
 - Instantiate the truffle dashboard
 
   ```shell
-    truffle dashboard
+  truffle dashboard
   ```
 
 - The browser will open up and then you have to connect with the MetaMask extension. Select the preferred network and the account to deploy the smart contract.
@@ -48,7 +48,7 @@
   npx hardhat run .\scripts\deploy.js --network truffle
   ```
 
-- Sign the deployment transaction from the MetaMask extension.
+- Switch to the browser and sign the deployment transaction from the MetaMask extension.
 
 - Verify the smart contract using the network on which it was deployed and the smart contract address, alongwith the constructor arguments.
 
