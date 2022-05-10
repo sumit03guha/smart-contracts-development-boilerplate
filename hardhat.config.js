@@ -31,7 +31,7 @@ module.exports = {
   networks: {
     hardhat: {
       /**
-       * @see https://hardhat.org/hardhat-network/reference/#allowunlimitedcontractsize
+       * @see {@link https://hardhat.org/hardhat-network/reference/#allowunlimitedcontractsize}
        * @default false
        */
       allowUnlimitedContractSize: true,
