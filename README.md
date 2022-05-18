@@ -79,7 +79,7 @@
 ├── package-lock.json     # gitignored
 ├── package.json          # project details and dependencies
 ├── README.md
-└── secrets.json          # API keys of block explorers for smart contract verification
+└── secrets.json          # API keys of block explorers for smart contract verification [should be gitignored]
 ```
 
 ## Notes
