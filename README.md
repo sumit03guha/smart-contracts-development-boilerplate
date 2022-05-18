@@ -66,7 +66,7 @@
 ```shell
 .
 ├── artifacts             # hardhat deployment information [hardhat default]
-├── build                 # deployed addresse and the ABI of the smart contract (scripts/deploy.js)
+├── build                 # deployed addresses and the ABI of the smart contract (scripts/deploy.js)
 ├── cache                 # hardhat deployment information [hardhat default]
 ├── contracts             # smart contracts solidity files
 ├── coverage              # coverage report (index.html) [gitignored]
