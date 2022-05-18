@@ -8,7 +8,7 @@
 - Select Desktop Development with C++ and uncheck all the optional installation options.
 - Once it is done, the truffle can be installed with `npm i -g truffle`
 
-## Hardhat commands
+## Instructions and hardhat commands
 
 - Install the boilerplate project dependencies. \
   This will install the packages mentioned inside the `package.json` file.
