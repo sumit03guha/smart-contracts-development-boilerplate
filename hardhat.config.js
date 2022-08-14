@@ -1,7 +1,4 @@
-require('@nomiclabs/hardhat-ethers');
-require('@nomicfoundation/hardhat-chai-matchers');
-require('@nomiclabs/hardhat-etherscan');
-require('solidity-coverage');
+require('@nomicfoundation/hardhat-toolbox');
 
 const secrets = require('./secrets.json');
 
@@ -12,7 +9,7 @@ const FTMSCAN_API_KEY = secrets.FTMSCAN_API_KEY;
 
 module.exports = {
   solidity: {
-    version: '0.8.12',
+    version: '0.8.16',
     settings: {
       optimizer: {
         enabled: true,
@@ -38,6 +35,10 @@ module.exports = {
       allowUnlimitedContractSize: true,
     },
 
+    localhost: {
+      timeout: 1000000000,
+    },
+
     /**
      * @summary Network to be used during the smart contract verification.
      */
@@ -50,7 +51,7 @@ module.exports = {
       chainId: 97,
     },
     rinkeby: {
-      url: 'https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
+      url: `https://rinkeby.infura.io/v3/${INFURA_API_KEY}`,
       chainId: 4,
     },
     mumbai: {
