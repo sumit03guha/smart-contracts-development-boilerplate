@@ -17,6 +17,18 @@
   npm i
   ```
 
+- Compile the smart contracts.
+
+  ```shell
+  npx hardhat compile
+  ```
+
+- Compute the size of the smart contracts.
+
+  ```shell
+  npx hardhat size-contracts
+  ```
+
 - Instantiate the hardhat local node.
 
   ```shell
