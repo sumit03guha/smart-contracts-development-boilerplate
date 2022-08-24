@@ -1,4 +1,5 @@
 require('@nomicfoundation/hardhat-toolbox');
+require('hardhat-contract-sizer');
 
 const secrets = require('./secrets.json');
 
@@ -68,6 +69,14 @@ module.exports = {
     truffle: {
       url: 'http://localhost:24012/rpc',
     },
+  },
+  contractSizer: {
+    alphaSort: true,
+    disambiguatePaths: false,
+    runOnCompile: false,
+    strict: true,
+    only: [],
+    except: [],
   },
   /**
    * @description The following config requires the @param apiKey to be set
