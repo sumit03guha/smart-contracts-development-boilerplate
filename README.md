@@ -8,27 +8,6 @@
 - Select Desktop Development with C++ and uncheck all the optional installation options.
 - Once it is done, the truffle can be installed with `npm i -g truffle`
 
-## A typical top-level directory layout
-
-```shell
-.
-├── artifacts             # hardhat deployment information [hardhat default]
-├── build                 # deployed addresses and the ABI of the smart contract (scripts/deploy.js)
-├── cache                 # hardhat deployment information [hardhat default]
-├── contracts             # smart contracts solidity files
-├── coverage              # coverage report (index.html) [gitignored]
-├── node_modules          # npm dependencies [gitignored]
-├── scripts               # deployment scripts (deploy.js) and other tasks [modified after hardhat default]
-├── test                  # test scripts [modified after hardhat default]
-├── .gitignore
-├── coverage.json         # gitignored
-├── hardhat-config.js     # hardhat configuration [modified after hardhat default]
-├── package-lock.json     # gitignored
-├── package.json          # project details and dependencies
-├── README.md
-└── secrets.json          # API keys of block explorers for smart contract verification [should be gitignored]
-```
-
 ## Instructions and hardhat commands
 
 - Install the boilerplate project dependencies. \
@@ -93,6 +72,27 @@
   ```shell
   npx hardhat verify --network NETWORK_NAME DEPLOYED_CONTRACT_ADDRESS "CONSTRUCTOR_ARGUMENTS"
   ```
+
+## A typical top-level directory layout
+
+```shell
+.
+├── artifacts             # hardhat deployment information [hardhat default]
+├── build                 # deployed addresses and the ABI of the smart contract (scripts/deploy.js)
+├── cache                 # hardhat deployment information [hardhat default]
+├── contracts             # smart contracts solidity files
+├── coverage              # coverage report (index.html) [gitignored]
+├── node_modules          # npm dependencies [gitignored]
+├── scripts               # deployment scripts (deploy.js) and other tasks [modified after hardhat default]
+├── test                  # test scripts [modified after hardhat default]
+├── .gitignore
+├── coverage.json         # gitignored
+├── hardhat-config.js     # hardhat configuration [modified after hardhat default]
+├── package-lock.json     # gitignored
+├── package.json          # project details and dependencies
+├── README.md
+└── secrets.json          # API keys of block explorers for smart contract verification [should be gitignored]
+```
 
 ## Notes
 
