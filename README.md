@@ -8,6 +8,27 @@
 - Select Desktop Development with C++ and uncheck all the optional installation options.
 - Once it is done, the truffle can be installed with `npm i -g truffle`
 
+## A typical top-level directory layout
+
+```shell
+.
+├── artifacts             # hardhat deployment information [hardhat default]
+├── build                 # deployed addresses and the ABI of the smart contract (scripts/deploy.js)
+├── cache                 # hardhat deployment information [hardhat default]
+├── contracts             # smart contracts solidity files
+├── coverage              # coverage report (index.html) [gitignored]
+├── node_modules          # npm dependencies [gitignored]
+├── scripts               # deployment scripts (deploy.js) and other tasks [modified after hardhat default]
+├── test                  # test scripts [modified after hardhat default]
+├── .gitignore
+├── coverage.json         # gitignored
+├── hardhat-config.js     # hardhat configuration [modified after hardhat default]
+├── package-lock.json     # gitignored
+├── package.json          # project details and dependencies
+├── README.md
+└── secrets.json          # API keys of block explorers for smart contract verification [should be gitignored]
+```
+
 ## Instructions and hardhat commands
 
 - Install the boilerplate project dependencies. \
@@ -48,7 +69,8 @@
   npx hardhat coverage
   ```
 
-- Instantiate the truffle dashboard
+- Instantiate the truffle dashboard. \
+  This lets you deploy the contracts without the need of pasting the private key anywhere in the project.
 
   ```shell
   truffle dashboard
@@ -56,10 +78,10 @@
 
 - The browser will open up and then you have to connect with the MetaMask extension. Select the preferred network and the account to deploy the smart contract.
 
-- Deploy the boilerplate project smart contracts using truffle dashboard network
+- Deploy the powercity project smart contracts using truffle dashboard network
 
   ```shell
-  npx hardhat run .\scripts\deploy.js --network truffle
+  npx hardhat run .\scripts\DEPLOYMENT_SCRIPT --network truffle
   ```
 
 - Switch to the browser and sign the deployment transaction from the MetaMask extension.
@@ -69,30 +91,8 @@
 - Verify the smart contract using the network on which it was deployed and the smart contract address, alongwith the constructor arguments.
 
   ```shell
-  npx hardhat verify --network NETWORK_NAME DEPLOYED_CONTRACT_ADDRESS "Hello,
-  Hardhat!"
+  npx hardhat verify --network NETWORK_NAME DEPLOYED_CONTRACT_ADDRESS "CONSTRUCTOR_ARGUMENTS"
   ```
-
-## A typical top-level directory layout
-
-```shell
-.
-├── artifacts             # hardhat deployment information [hardhat default]
-├── build                 # deployed addresses and the ABI of the smart contract (scripts/deploy.js)
-├── cache                 # hardhat deployment information [hardhat default]
-├── contracts             # smart contracts solidity files
-├── coverage              # coverage report (index.html) [gitignored]
-├── node_modules          # npm dependencies [gitignored]
-├── scripts               # deployment scripts (deploy.js) and other tasks [modified after hardhat default]
-├── test                  # test scripts [modified after hardhat default]
-├── .gitignore
-├── coverage.json         # gitignored
-├── hardhat-config.js     # hardhat configuration [modified after hardhat default]
-├── package-lock.json     # gitignored
-├── package.json          # project details and dependencies
-├── README.md
-└── secrets.json          # API keys of block explorers for smart contract verification [should be gitignored]
-```
 
 ## Notes
 
