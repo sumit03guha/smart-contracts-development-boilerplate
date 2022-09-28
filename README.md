@@ -11,11 +11,18 @@
 ## Instructions and hardhat commands
 
 - Install the boilerplate project dependencies. \
-  This will install the packages mentioned inside the `package.json` file.
+  Do a check for the latest npm package versions. \
+  This will update the versions inside the package.json.
+
+  ```shell
+  npx npm-check-updates -u
+  ```
 
   ```shell
   npm i
   ```
+
+  This will install the packages mentioned inside the `package.json` file.
 
 - Compile the smart contracts.
 
