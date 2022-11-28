@@ -1,6 +1,6 @@
-import { ContractFactory, Contract, Signer } from 'ethers';
-import { expect } from 'chai';
 import { ethers } from 'hardhat';
+import { ContractFactory, Contract } from 'ethers';
+import { expect } from 'chai';
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
 
 describe('Greeter', async () => {
