@@ -45,7 +45,7 @@
 - Run the boilerplate project tests using the local node.
 
   ```shell
-  npm run test --network localhost
+  npm run test
   ```
 
 - Generate the code coverage report. \
@@ -64,7 +64,7 @@
 
 - The browser will open up and then you have to connect with the MetaMask extension. Select the preferred network and the account to deploy the smart contract.
 
-- Deploy the hardhat project smart contracts using truffle dashboard network
+- Deploy the hardhat project smart contracts using truffle dashboard network and enter the network in the CLI.
 
   ```shell
   npm run deploy
@@ -74,10 +74,10 @@
 
 - After the succesful deployment of the smart contracts, a `build/deploy.json` file will be generated comprising the deployed addresse and the ABI of the smart contracts.
 
-- Verify the smart contract using the network on which it was deployed and the smart contract address, alongwith the constructor arguments.
+- Verify the smart contract using the network on which it was deployed and the smart contract address, alongwith the constructor arguments by modifiying the `verify.ts` file, and entering the network name in the CLI after running the following command.
 
   ```shell
-  npx hardhat verify --network NETWORK_NAME DEPLOYED_CONTRACT_ADDRESS "CONSTRUCTOR_ARGUMENTS"
+  npm run verify
   ```
 
 ## A typical top-level directory layout
