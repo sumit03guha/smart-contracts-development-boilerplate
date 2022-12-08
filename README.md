@@ -45,7 +45,7 @@
 - Run the boilerplate project tests using the local node.
 
   ```shell
-  npm run test
+  npm run test --network localhost
   ```
 
 - Generate the code coverage report. \
