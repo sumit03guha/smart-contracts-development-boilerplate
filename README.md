@@ -27,7 +27,7 @@
 - Compile the smart contracts.
 
   ```shell
-  npx hardhat compile
+  npm run clean-compile
   ```
 
 - Compute the size of the smart contracts.
@@ -45,7 +45,7 @@
 - Run the boilerplate project tests using the local node.
 
   ```shell
-  npx hardhat test --network localhost
+  npm run test
   ```
 
 - Generate the code coverage report. \
@@ -64,10 +64,10 @@
 
 - The browser will open up and then you have to connect with the MetaMask extension. Select the preferred network and the account to deploy the smart contract.
 
-- Deploy the powercity project smart contracts using truffle dashboard network
+- Deploy the hardhat project smart contracts using truffle dashboard network
 
   ```shell
-  npx hardhat run .\scripts\DEPLOYMENT_SCRIPT --network truffle
+  npm run deploy
   ```
 
 - Switch to the browser and sign the deployment transaction from the MetaMask extension.
@@ -84,9 +84,9 @@
 
 ```shell
 .
-├── artifacts             # hardhat deployment information [hardhat default]
 ├── build                 # deployed addresses and the ABI of the smart contract (scripts/deploy.js)
-├── cache                 # hardhat deployment information [hardhat default]
+  └── artifacts             # hardhat deployment information [hardhat default]
+  └── cache                 # hardhat deployment information [hardhat default]
 ├── contracts             # smart contracts solidity files
 ├── coverage              # coverage report (index.html) [gitignored]
 ├── node_modules          # npm dependencies [gitignored]
@@ -98,7 +98,8 @@
 ├── package-lock.json     # gitignored
 ├── package.json          # project details and dependencies
 ├── README.md
-└── secrets.json          # API keys of block explorers for smart contract verification [should be gitignored]
+├── .env.example          # format for structuring the .env file
+└── .env          # API keys of block explorers for smart contract verification [should be gitignored]
 ```
 
 ## Notes
