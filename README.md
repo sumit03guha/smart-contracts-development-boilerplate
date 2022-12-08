@@ -27,7 +27,7 @@
 - Compile the smart contracts.
 
   ```shell
-  npm run clean-compile
+  npx hardhat compile
   ```
 
 - Compute the size of the smart contracts.
@@ -45,7 +45,7 @@
 - Run the boilerplate project tests using the local node.
 
   ```shell
-  npm run test
+  npx hardhat test --network localhost
   ```
 
 - Generate the code coverage report. \
@@ -64,29 +64,29 @@
 
 - The browser will open up and then you have to connect with the MetaMask extension. Select the preferred network and the account to deploy the smart contract.
 
-- Deploy the hardhat project smart contracts using truffle dashboard network and enter the network in the CLI.
+- Deploy the powercity project smart contracts using truffle dashboard network
 
   ```shell
-  npm run deploy
+  npx hardhat run .\scripts\DEPLOYMENT_SCRIPT --network truffle
   ```
 
 - Switch to the browser and sign the deployment transaction from the MetaMask extension.
 
 - After the succesful deployment of the smart contracts, a `build/deploy.json` file will be generated comprising the deployed addresse and the ABI of the smart contracts.
 
-- Verify the smart contract using the network on which it was deployed and the smart contract address, alongwith the constructor arguments by modifiying the `verify.ts` file, and entering the network name in the CLI after running the following command.
+- Verify the smart contract using the network on which it was deployed and the smart contract address, alongwith the constructor arguments.
 
   ```shell
-  npm run verify
+  npx hardhat verify --network NETWORK_NAME DEPLOYED_CONTRACT_ADDRESS "CONSTRUCTOR_ARGUMENTS"
   ```
 
 ## A typical top-level directory layout
 
 ```shell
 .
+├── artifacts             # hardhat deployment information [hardhat default]
 ├── build                 # deployed addresses and the ABI of the smart contract (scripts/deploy.js)
-  └── artifacts             # hardhat deployment information [hardhat default]
-  └── cache                 # hardhat deployment information [hardhat default]
+├── cache                 # hardhat deployment information [hardhat default]
 ├── contracts             # smart contracts solidity files
 ├── coverage              # coverage report (index.html) [gitignored]
 ├── node_modules          # npm dependencies [gitignored]
@@ -98,8 +98,7 @@
 ├── package-lock.json     # gitignored
 ├── package.json          # project details and dependencies
 ├── README.md
-├── .env.example          # format for structuring the .env file
-└── .env          # API keys of block explorers for smart contract verification [should be gitignored]
+└── secrets.json          # API keys of block explorers for smart contract verification [should be gitignored]
 ```
 
 ## Notes

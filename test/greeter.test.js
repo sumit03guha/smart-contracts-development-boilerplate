@@ -1,25 +1,20 @@
-import { ethers } from 'hardhat';
-import { ContractFactory, Contract } from 'ethers';
-import { expect } from 'chai';
-import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
+const { expect } = require('chai');
+const { ethers } = require('hardhat');
 
 describe('Greeter', async () => {
   // ----------------- MODIFIED FOR FETCHING HARDHAT SIGNERS ----------------- //
 
-  let Greeter: ContractFactory, greeter: Contract;
-  let owner: SignerWithAddress,
-    user1: SignerWithAddress,
-    user2: SignerWithAddress,
-    user3: SignerWithAddress;
+  let Greeter, greeter;
+  let owner, user1, user2, user3;
 
   /**
    * @summary Hardhat signers are used to deploy and test the contract.
    * @see {@link https://docs.ethers.io/v5/api/signer/}
-   * Look into the .connect() method in line 33 below.
+   * Look into the .connect() method in line 28 below.
    */
 
   before(async () => {
-    const accounts: SignerWithAddress[] = await ethers.getSigners();
+    const accounts = await ethers.getSigners();
     owner = accounts[0];
     user1 = accounts[1];
     user2 = accounts[2];
