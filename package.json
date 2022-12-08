@@ -11,7 +11,7 @@
     "clean-compile": "hardhat clean && hardhat compile",
     "test": "hardhat test --network localhost",
     "deploy": "echo 'ENTER NETWORK' && read network && hardhat run scripts/deploy.ts --network $network",
-    "verify": "echo ENTER NETWORK' && read network && hardhat run verify --network $network"
+    "verify": "echo 'ENTER NETWORK' && read network && hardhat run scripts/verify.ts --network $network"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
