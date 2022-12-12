@@ -19,7 +19,7 @@
   ```
 
   ```shell
-  npm i
+  yarn install
   ```
 
   This will install the packages mentioned inside the `package.json` file.
@@ -27,13 +27,13 @@
 - Compile the smart contracts.
 
   ```shell
-  npm run clean-compile
+  yarn run clean-compile
   ```
 
 - Compute the size of the smart contracts.
 
   ```shell
-  npx hardhat size-contracts
+  yarn run size
   ```
 
 - Instantiate the hardhat local node.
@@ -45,7 +45,7 @@
 - Run the boilerplate project tests using the local node.
 
   ```shell
-  npm run test
+  yarn run test
   ```
 
 - Generate the code coverage report. \
@@ -64,20 +64,20 @@
 
 - The browser will open up and then you have to connect with the MetaMask extension. Select the preferred network and the account to deploy the smart contract.
 
-- Deploy the hardhat project smart contracts using truffle dashboard network and enter the network in the CLI.
+- Deploy the hardhat project smart contracts using your preferred network or the truffle dashboard, by specifying the `NETWORK`. If you are using any network other than `truffle` or `localhost`, then the private key of the account from which the smart contract is to be deployed, should be specified in the `.env` file.
 
   ```shell
-  npm run deploy
+  yarn run deploy {NETWORK}
   ```
 
-- Switch to the browser and sign the deployment transaction from the MetaMask extension.
+- If `truffle` has been specified as the `NETWORK`, then switch to the browser and sign the deployment transaction from the MetaMask extension.
 
 - After the succesful deployment of the smart contracts, a `build/deploy.json` file will be generated comprising the deployed addresse and the ABI of the smart contracts.
 
-- Verify the smart contract using the network on which it was deployed and the smart contract address, alongwith the constructor arguments by modifiying the `verify.ts` file, and entering the network name in the CLI after running the following command.
+- Verify the smart contract using the `NETWORK` on which it was deployed and the smart contract address, alongwith the constructor arguments by modifiying the `verify.ts` file, and entering the network name in the CLI after running the following command.
 
   ```shell
-  npm run verify
+  yarn run verify {NETWORK}
   ```
 
 ## A typical top-level directory layout
@@ -87,18 +87,21 @@
 ├── build                 # deployed addresses and the ABI of the smart contract (scripts/deploy.js)
   └── artifacts             # hardhat deployment information [hardhat default]
   └── cache                 # hardhat deployment information [hardhat default]
+  └── deployments           # address and ABI of the smart contract [modified after hardhat default]
 ├── contracts             # smart contracts solidity files
 ├── coverage              # coverage report (index.html) [gitignored]
-├── node_modules          # npm dependencies [gitignored]
+├── node_modules          # npm/yarn dependency files [gitignored]
 ├── scripts               # deployment scripts (deploy.js) and other tasks [modified after hardhat default]
 ├── test                  # test scripts [modified after hardhat default]
 ├── .gitignore
 ├── coverage.json         # gitignored
-├── hardhat-config.js     # hardhat configuration [modified after hardhat default]
-├── package-lock.json     # gitignored
+├── hardhat-config.ts     # hardhat configuration [modified after hardhat default]
+├── yarn.lock             # yarn dependencies
 ├── package.json          # project details and dependencies
 ├── README.md
 ├── .env.example          # format for structuring the .env file
+├── .yarnrc.yml           # https://yarnpkg.com/getting-started/migration#if-required-enable-the-node-modules-plugin
+├── tsconfig.json         # typescript configuration [hardhat default]
 └── .env          # API keys of block explorers for smart contract verification [should be gitignored]
 ```
 
