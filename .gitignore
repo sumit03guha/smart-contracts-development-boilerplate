@@ -3,9 +3,18 @@ node_modules
 coverage
 coverage.json
 typechain
-secrets.json
+typechain-types
 
 #Hardhat files
 cache
 artifacts
 package-lock.json
+
+#yarn files
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

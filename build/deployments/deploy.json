@@ -1,10 +1,19 @@
 {
   "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+  "network": {
+    "chainId": 31337,
+    "name": "unknown"
+  },
   "abi": [
     {
       "type": "constructor",
       "payable": false,
-      "inputs": [{ "type": "string", "name": "_greeting" }]
+      "inputs": [
+        {
+          "type": "string",
+          "name": "_greet"
+        }
+      ]
     },
     {
       "type": "function",
@@ -13,14 +22,23 @@
       "stateMutability": "view",
       "payable": false,
       "inputs": [],
-      "outputs": [{ "type": "string" }]
+      "outputs": [
+        {
+          "type": "string"
+        }
+      ]
     },
     {
       "type": "function",
       "name": "setGreeting",
       "constant": false,
       "payable": false,
-      "inputs": [{ "type": "string", "name": "_greeting" }],
+      "inputs": [
+        {
+          "type": "string",
+          "name": "_greet"
+        }
+      ],
       "outputs": []
     }
   ]
