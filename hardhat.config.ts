@@ -2,6 +2,8 @@ import * as dotenv from 'dotenv';
 import '@nomicfoundation/hardhat-toolbox';
 import { HardhatUserConfig } from 'hardhat/config';
 import 'hardhat-contract-sizer';
+import '@nomiclabs/hardhat-solhint';
+import '@primitivefi/hardhat-dodoc';
 
 dotenv.config();
 
@@ -114,6 +116,17 @@ const config: HardhatUserConfig = {
     strict: true,
     only: [],
     except: [],
+  },
+  /**
+   * @description This works along with the @package hardhat-dodoc to generate the documentation of the smart contracts.
+   * @see {@link https://github.com/primitivefinance/primitive-dodoc#readme}
+   */
+  dodoc: {
+    runOnCompile: false,
+    debugMode: true,
+    include: ['contracts'],
+    exclude: [],
+    outputDir: 'docs',
   },
   /**
    * @description The following config requires the @param apiKey to be set

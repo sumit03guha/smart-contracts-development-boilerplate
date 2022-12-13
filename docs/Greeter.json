@@ -1,0 +1,28 @@
+{
+  "methods": {
+    "greet()": {
+      "stateMutability": "view",
+      "code": "function greet() external view returns (string)",
+      "inputs": {},
+      "outputs": {
+        "_0": {
+          "type": "string"
+        }
+      }
+    },
+    "setGreeting(string)": {
+      "stateMutability": "nonpayable",
+      "code": "function setGreeting(string _greet) external nonpayable",
+      "inputs": {
+        "_greet": {
+          "type": "string"
+        }
+      },
+      "outputs": {}
+    }
+  },
+  "events": {},
+  "errors": {},
+  "path": "",
+  "name": "Greeter"
+}
