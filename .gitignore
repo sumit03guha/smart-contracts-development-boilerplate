@@ -4,9 +4,17 @@ coverage
 coverage.json
 typechain
 typechain-types
-secrets.json
 
 #Hardhat files
 cache
 artifacts
 package-lock.json
+
+#yarn files
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

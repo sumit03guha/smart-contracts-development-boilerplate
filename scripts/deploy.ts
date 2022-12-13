@@ -17,7 +17,7 @@ const main = async () => {
 
   /**
    * @summary A build folder will be created in the root directory of the project
-   * where the ABI and the deployed address will be saved inside a JSON file.
+   * where the ABI, network name, chainId and the deployed address will be saved inside a JSON file.
    */
 
   fs.mkdir('./build/deployments', { recursive: true }, (err) => {
@@ -25,10 +25,16 @@ const main = async () => {
   });
 
   const address: string = greeter.address;
+  const res = await greeter.provider.getNetwork();
+  const network: {} = {
+    chainId: res.chainId,
+    name: res.name,
+  };
   const abi: [] = JSON.parse(String(greeter.interface.format('json')));
 
   const output = {
     address,
+    network,
     abi,
   };
 

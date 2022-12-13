@@ -19,7 +19,7 @@
   ```
 
   ```shell
-  npm i
+  yarn install
   ```
 
   This will install the packages mentioned inside the `package.json` file.
@@ -27,13 +27,19 @@
 - Compile the smart contracts.
 
   ```shell
-  npm run clean-compile
+  yarn run clean-compile
   ```
 
-- Compute the size of the smart contracts.
+- Check for linting and formatting errors in the code. This will display all the code errors and warnings in the terminal.
 
   ```shell
-  npx hardhat size-contracts
+  npx hardhat check
+  ```
+
+- Compute the size of the smart contracts. This will display the size of the smart contracts in the terminal.
+
+  ```shell
+  yarn run size
   ```
 
 - Instantiate the hardhat local node.
@@ -42,10 +48,10 @@
   npx hardhat node
   ```
 
-- Run the boilerplate project tests using the local node.
+- Split the terminal running the hardhat node, or, open another terminal and run the project test scripts using the local node.
 
   ```shell
-  npm run test
+  yarn run test
   ```
 
 - Generate the code coverage report. \
@@ -53,6 +59,12 @@
 
   ```shell
   npx hardhat coverage
+  ```
+
+- Generate the documentation for the smart contracts. This will create a `docs` folder comprising all the documentation related to the smart contracts, in the root directory of the project.
+
+  ```shell
+  npx hardhat dodoc
   ```
 
 - Instantiate the truffle dashboard. \
@@ -64,42 +76,49 @@
 
 - The browser will open up and then you have to connect with the MetaMask extension. Select the preferred network and the account to deploy the smart contract.
 
-- Deploy the hardhat project smart contracts using truffle dashboard network and enter the network in the CLI.
+- Deploy the hardhat project smart contracts using your preferred network or the truffle dashboard, by specifying the `NETWORK`. If you are using any network other than `truffle` or `localhost`, then the private key of the account from which the smart contract is to be deployed, should be specified in the `.env` file.
 
   ```shell
-  npm run deploy
+  yarn run deploy {NETWORK}
   ```
 
-- Switch to the browser and sign the deployment transaction from the MetaMask extension.
+- If `truffle` has been specified as the `NETWORK`, then switch to the browser and sign the deployment transaction from the MetaMask extension.
 
 - After the succesful deployment of the smart contracts, a `build/deploy.json` file will be generated comprising the deployed addresse and the ABI of the smart contracts.
 
-- Verify the smart contract using the network on which it was deployed and the smart contract address, alongwith the constructor arguments by modifiying the `verify.ts` file, and entering the network name in the CLI after running the following command.
+- Verify the smart contract using the `NETWORK` on which it was deployed and the smart contract address, alongwith the constructor arguments by modifiying the `verify.ts` file, and entering the network name in the CLI after running the following command.
 
   ```shell
-  npm run verify
+  yarn run verify {NETWORK}
   ```
 
 ## A typical top-level directory layout
 
 ```shell
 .
-├── build                 # deployed addresses and the ABI of the smart contract (scripts/deploy.js)
-  └── artifacts             # hardhat deployment information [hardhat default]
-  └── cache                 # hardhat deployment information [hardhat default]
+├── build                 # deployed addresses and the ABI of the smart contract (scripts/deploy.ts)
+  └── artifacts           # hardhat deployment information [hardhat default]
+  └── cache               # hardhat deployment information [hardhat default]
+  └── deployments         # address and ABI of the smart contract [modified after hardhat default]
 ├── contracts             # smart contracts solidity files
 ├── coverage              # coverage report (index.html) [gitignored]
-├── node_modules          # npm dependencies [gitignored]
-├── scripts               # deployment scripts (deploy.js) and other tasks [modified after hardhat default]
+├── docs                  # smart contracts documentation
+├── node_modules          # npm/yarn dependency files [gitignored]
+├── scripts               # deployment scripts (deploy.ts) and other tasks [modified after hardhat default]
 ├── test                  # test scripts [modified after hardhat default]
-├── .gitignore
-├── coverage.json         # gitignored
-├── hardhat-config.js     # hardhat configuration [modified after hardhat default]
-├── package-lock.json     # gitignored
-├── package.json          # project details and dependencies
-├── README.md
+├── typechain-types       # typechain types, generated after compilation [gitignored]
+├── .env                  # API keys of block explorers for smart contract verification [should be gitignored]
 ├── .env.example          # format for structuring the .env file
-└── .env          # API keys of block explorers for smart contract verification [should be gitignored]
+├── .solhint.json         # solhint configuration
+├── .solhintignore        # solhint ignore configuration
+├── .yarnrc.yml           # https://yarnpkg.com/getting-started/migration#if-required-enable-the-node-modules-plugin
+├── coverage.json         # gitignored
+├── hardhat-config.ts     # hardhat configuration [modified after hardhat default]
+├── package.json          # project details and dependencies
+├── README.md             # project details and instructions
+├── tsconfig.json         # typescript configuration [hardhat default]
+├── yarn.lock             # yarn dependencies
+└── .gitignore
 ```
 
 ## Notes
