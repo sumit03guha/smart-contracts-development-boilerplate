@@ -30,7 +30,13 @@
   yarn run clean-compile
   ```
 
-- Compute the size of the smart contracts.
+- Check for linting and formatting errors in the code. This will display all the code errors and warnings in the terminal.
+
+  ```shell
+  npx hardhat check
+  ```
+
+- Compute the size of the smart contracts. This will display the size of the smart contracts in the terminal.
 
   ```shell
   yarn run size
@@ -42,7 +48,7 @@
   npx hardhat node
   ```
 
-- Run the boilerplate project tests using the local node.
+- Split the terminal running the hardhat node, or, open another terminal and run the project test scripts using the local node.
 
   ```shell
   yarn run test
@@ -53,6 +59,12 @@
 
   ```shell
   npx hardhat coverage
+  ```
+
+- Generate the documentation for the smart contracts. This will create a `docs` folder comprising all the documentation related to the smart contracts, in the root directory of the project.
+
+  ```shell
+  npx hardhat dodoc
   ```
 
 - Instantiate the truffle dashboard. \
@@ -84,25 +96,29 @@
 
 ```shell
 .
-├── build                 # deployed addresses and the ABI of the smart contract (scripts/deploy.js)
-  └── artifacts             # hardhat deployment information [hardhat default]
-  └── cache                 # hardhat deployment information [hardhat default]
-  └── deployments           # address and ABI of the smart contract [modified after hardhat default]
+├── build                 # deployed addresses and the ABI of the smart contract (scripts/deploy.ts)
+  └── artifacts           # hardhat deployment information [hardhat default]
+  └── cache               # hardhat deployment information [hardhat default]
+  └── deployments         # address and ABI of the smart contract [modified after hardhat default]
 ├── contracts             # smart contracts solidity files
 ├── coverage              # coverage report (index.html) [gitignored]
+├── docs                  # smart contracts documentation
 ├── node_modules          # npm/yarn dependency files [gitignored]
-├── scripts               # deployment scripts (deploy.js) and other tasks [modified after hardhat default]
+├── scripts               # deployment scripts (deploy.ts) and other tasks [modified after hardhat default]
 ├── test                  # test scripts [modified after hardhat default]
-├── .gitignore
+├── typechain-types       # typechain types, generated after compilation [gitignored]
+├── .env                  # API keys of block explorers for smart contract verification [should be gitignored]
+├── .env.example          # format for structuring the .env file
+├── .solhint.json         # solhint configuration
+├── .solhintignore        # solhint ignore configuration
+├── .yarnrc.yml           # https://yarnpkg.com/getting-started/migration#if-required-enable-the-node-modules-plugin
 ├── coverage.json         # gitignored
 ├── hardhat-config.ts     # hardhat configuration [modified after hardhat default]
-├── yarn.lock             # yarn dependencies
 ├── package.json          # project details and dependencies
-├── README.md
-├── .env.example          # format for structuring the .env file
-├── .yarnrc.yml           # https://yarnpkg.com/getting-started/migration#if-required-enable-the-node-modules-plugin
+├── README.md             # project details and instructions
 ├── tsconfig.json         # typescript configuration [hardhat default]
-└── .env          # API keys of block explorers for smart contract verification [should be gitignored]
+├── yarn.lock             # yarn dependencies
+└── .gitignore
 ```
 
 ## Notes
