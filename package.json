@@ -9,7 +9,12 @@
   "license": "MIT",
   "scripts": {
     "clean-compile": "hardhat clean && hardhat compile",
-    "test": "hardhat test --network localhost",
+    "check": "hardhat check",
+    "node": "hardhat node",
+    "test": "hardhat test",
+    "test:localhost": "hardhat test --network localhost",
+    "coverage": "hardhat coverage",
+    "doc": "hardhat dodoc",
     "deploy": "hardhat run scripts/deploy.ts --network $0",
     "verify": "hardhat run scripts/verify.ts --network $0",
     "size": "hardhat size-contracts"
