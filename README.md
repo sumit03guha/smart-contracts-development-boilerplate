@@ -19,7 +19,7 @@
   ```
 
   ```shell
-  yarn install
+  yarn
   ```
 
   This will install the packages mentioned inside the `package.json` file.
@@ -27,44 +27,51 @@
 - Compile the smart contracts.
 
   ```shell
-  yarn run clean-compile
+  yarn clean-compile
   ```
 
 - Check for linting and formatting errors in the code. This will display all the code errors and warnings in the terminal.
 
   ```shell
-  npx hardhat check
+  yarn check
   ```
 
 - Compute the size of the smart contracts. This will display the size of the smart contracts in the terminal.
 
   ```shell
-  yarn run size
+  yarn size
   ```
 
-- Instantiate the hardhat local node.
+- Run the test scripts.
 
   ```shell
-  npx hardhat node
+  yarn test
+  ```
+
+- To run the tests on your localhost node for debugging purposes, you can run the following commands.\
+Instantiate the hardhat local node.
+
+  ```shell
+  yarn run node
   ```
 
 - Split the terminal running the hardhat node, or, open another terminal and run the project test scripts using the local node.
 
   ```shell
-  yarn run test
+  yarn test:localhost
   ```
 
 - Generate the code coverage report. \
   After generating the report, you can open the `coverage/index.html` file to see the results.
 
   ```shell
-  npx hardhat coverage
+  yarn coverage
   ```
 
 - Generate the documentation for the smart contracts. This will create a `docs` folder comprising all the documentation related to the smart contracts, in the root directory of the project.
 
   ```shell
-  npx hardhat dodoc
+  yarn doc
   ```
 
 - Instantiate the truffle dashboard. \
@@ -79,7 +86,7 @@
 - Deploy the hardhat project smart contracts using your preferred network or the truffle dashboard, by specifying the `NETWORK`. If you are using any network other than `truffle` or `localhost`, then the private key of the account from which the smart contract is to be deployed, should be specified in the `.env` file.
 
   ```shell
-  yarn run deploy {NETWORK}
+  yarn deploy {NETWORK}
   ```
 
 - If `truffle` has been specified as the `NETWORK`, then switch to the browser and sign the deployment transaction from the MetaMask extension.
@@ -89,7 +96,7 @@
 - Verify the smart contract using the `NETWORK` on which it was deployed and the smart contract address, alongwith the constructor arguments by modifiying the `verify.ts` file, and entering the network name in the CLI after running the following command.
 
   ```shell
-  yarn run verify {NETWORK}
+  yarn verify {NETWORK}
   ```
 
 ## A typical top-level directory layout
