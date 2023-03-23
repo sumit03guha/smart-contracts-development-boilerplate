@@ -20,9 +20,11 @@ const main = async () => {
    * where the ABI, network name, chainId and the deployed address will be saved inside a JSON file.
    */
 
-  fs.mkdir('./build/deployments', { recursive: true }, (err) => {
-    if (err) console.error(err);
-  });
+  try {
+    fs.mkdirSync('./build/deployments', { recursive: true });
+  } catch (err) {
+    console.error(err);
+  }
 
   const address: string = greeter.address;
   const res = await greeter.provider.getNetwork();
