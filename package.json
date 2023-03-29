@@ -9,15 +9,18 @@
   "license": "MIT",
   "scripts": {
     "clean-compile": "hardhat clean && hardhat compile",
+    "compile": "hardhat compile",
     "check": "hardhat check",
-    "node": "hardhat node",
+    "localnode": "hardhat node",
     "test": "hardhat test",
     "test:localhost": "hardhat test --network localhost",
     "coverage": "hardhat coverage",
     "doc": "hardhat dodoc",
+    "deploy:localhost": "hardhat run scripts/deploy.ts --network localhost",
     "deploy": "hardhat run scripts/deploy.ts --network $0",
     "verify": "hardhat run scripts/verify.ts --network $0",
-    "size": "hardhat size-contracts"
+    "size": "hardhat size-contracts",
+    "typechain": "hardhat typechain"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
