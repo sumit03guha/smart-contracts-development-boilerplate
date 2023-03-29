@@ -36,29 +36,35 @@
   yarn check
   ```
 
+- Generate the typechain types for the smart contracts. This will create a `typechain-types` folder comprising all the typechain types, in the root directory of the project.
+
+  ```shell
+  yarn typechain
+  ```
+
 - Compute the size of the smart contracts. This will display the size of the smart contracts in the terminal.
 
   ```shell
   yarn size
   ```
 
-- Run the test scripts.
+- Run the test scripts. This uses the hardhat network configured in the `hardhat.config.ts` file to run the tests.
 
   ```shell
   yarn test
   ```
 
 - To run the tests on your localhost node for debugging purposes, you can run the following commands.\
-Instantiate the hardhat local node.
+  Instantiate the hardhat local node.
 
   ```shell
-  yarn run node
+  yarn localnode
   ```
 
 - Split the terminal running the hardhat node, or, open another terminal and run the project test scripts using the local node.
 
   ```shell
-  yarn test:localhost
+  yarn test:local
   ```
 
 - Generate the code coverage report. \
