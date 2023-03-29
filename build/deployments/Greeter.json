@@ -1,0 +1,47 @@
+{
+  "name": "Greeter",
+  "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "network": {
+    "chainId": 31337,
+    "name": "unknown"
+  },
+  "deployTransactionHash": "0x8720081e7177557c83223295428886bd7523700aad3622e01e8af4d4ce89f800",
+  "abi": [
+    {
+      "type": "constructor",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "string",
+          "name": "_greet"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "greet",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "setGreeting",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "string",
+          "name": "_greet"
+        }
+      ],
+      "outputs": []
+    }
+  ]
+}
