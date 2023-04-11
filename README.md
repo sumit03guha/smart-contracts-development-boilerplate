@@ -1,7 +1,11 @@
 # Basic Hardhat Project Boilerplate
 
+> This hardhat boilerplate also includes foundry fuzz-testing feature.
+
 ## Prerequisites
 
+- Install [foundry](https://book.getfoundry.sh/) for fuzzing the smart contracts. Go through the [installation instructions](https://book.getfoundry.sh/getting-started/installation) to install foundry.
+- Configure the foundry.toml as per your requirements. Refer to the [foundry config reference](https://book.getfoundry.sh/reference/config/) for more details.
 - Install truffle : `npm i -g truffle`
 - The latest version of truffle has issues with installation on Windows.
 - To resolve the errors, go to [this page](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false), download Microsoft Visual Studio 2022 and then install the Visual Studio Installer.
