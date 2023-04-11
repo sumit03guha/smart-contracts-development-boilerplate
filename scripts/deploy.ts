@@ -26,6 +26,7 @@ const main = async () => {
     console.error(err);
   }
 
+  const name: string = `Greeter`;
   const address: string = greeter.address;
   const res = await greeter.provider.getNetwork();
   const network: {} = {
@@ -33,16 +34,19 @@ const main = async () => {
     name: res.name,
   };
   const abi: [] = JSON.parse(String(greeter.interface.format('json')));
+  const deployTransactionHash: string = greeter.deployTransaction.hash;
 
   const output = {
+    name,
     address,
     network,
+    deployTransactionHash,
     abi,
   };
 
   try {
     fs.writeFileSync(
-      './build/deployments/deploy.json',
+      `./build/deployments/Greeter.json`,
       JSON.stringify(output, null, 2)
     );
   } catch (err) {

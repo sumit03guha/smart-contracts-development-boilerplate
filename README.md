@@ -1,7 +1,11 @@
 # Basic Hardhat Project Boilerplate
 
+> This hardhat boilerplate also includes foundry fuzz-testing feature.
+
 ## Prerequisites
 
+- Install [foundry](https://book.getfoundry.sh/) for fuzzing the smart contracts. Go through the [installation instructions](https://book.getfoundry.sh/getting-started/installation) to install foundry.
+- Configure the foundry.toml as per your requirements. Refer to the [foundry config reference](https://book.getfoundry.sh/reference/config/) for more details.
 - Install truffle : `npm i -g truffle`
 - The latest version of truffle has issues with installation on Windows.
 - To resolve the errors, go to [this page](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false), download Microsoft Visual Studio 2022 and then install the Visual Studio Installer.
@@ -36,29 +40,35 @@
   yarn check
   ```
 
+- Generate the typechain types for the smart contracts. This will create a `typechain-types` folder comprising all the typechain types, in the root directory of the project.
+
+  ```shell
+  yarn typechain
+  ```
+
 - Compute the size of the smart contracts. This will display the size of the smart contracts in the terminal.
 
   ```shell
   yarn size
   ```
 
-- Run the test scripts.
+- Run the test scripts. This uses the hardhat network configured in the `hardhat.config.ts` file to run the tests.
 
   ```shell
   yarn test
   ```
 
 - To run the tests on your localhost node for debugging purposes, you can run the following commands.\
-Instantiate the hardhat local node.
+  Instantiate the hardhat local node.
 
   ```shell
-  yarn run node
+  yarn localnode
   ```
 
 - Split the terminal running the hardhat node, or, open another terminal and run the project test scripts using the local node.
 
   ```shell
-  yarn test:localhost
+  yarn test:local
   ```
 
 - Generate the code coverage report. \
