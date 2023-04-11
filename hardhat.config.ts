@@ -10,14 +10,15 @@ dotenv.config();
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY;
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
+const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY;
 
 const config: HardhatUserConfig = {
   solidity: {
     compilers: [
       {
-        version: '0.8.17',
+        version: '0.8.19',
         settings: {
-          // viaIR: true,
+          viaIR: true,
           optimizer: {
             enabled: true,
             runs: 200,
@@ -97,6 +98,16 @@ const config: HardhatUserConfig = {
     localhost: {
       timeout: 1000000000,
     },
+  },
+  gasReporter: {
+    enabled: true,
+    currency: 'USD',
+    token: 'ETH',
+    coinmarketcap: COINMARKETCAP_API_KEY,
+    gasPrice: 21,
+    showTimeSpent: true,
+    outputFile: 'gas-report.txt',
+    noColors: true,
   },
   paths: {
     artifacts: 'build/artifacts',
