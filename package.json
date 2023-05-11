@@ -1,7 +1,7 @@
 {
-  "name": "hardhat-boilerplate",
-  "version": "0.6.5",
-  "description": "A boilerplate repository for hardhat project",
+  "name": "smart-contracts-development-boilerplate",
+  "version": "0.7.0",
+  "description": "A boilerplate repository for smart contracts development",
   "author": {
     "name": "Sumit Guha",
     "email": "sumit03guha@gmail.com"
@@ -14,6 +14,7 @@
     "localnode": "hardhat node",
     "test": "hardhat test --network hardhat",
     "test:local": "hardhat test --network localhost",
+    "test:forge": "forge test",
     "coverage": "hardhat coverage",
     "doc": "hardhat dodoc",
     "deploy:localhost": "hardhat run scripts/deploy.ts --network localhost",
@@ -51,10 +52,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sumit03guha/Hardhat-BoilerPlate"
+    "url": "https://github.com/sumit03guha/smart-contracts-development-boilerplate"
   },
   "keywords": [
     "hardhat",
+    "foundry",
+    "fuzzing",
     "smart-contracts",
     "ethers",
     "boilerplate",
