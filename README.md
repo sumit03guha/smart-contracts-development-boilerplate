@@ -1,4 +1,4 @@
-# Basic Hardhat Project Boilerplate
+# Smart Contracts Development Boilerplate
 
 > This smart-contracts-development-boilerplate is mostly based on hardhat and includes foundry fuzz-testing feature.
 
