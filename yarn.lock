@@ -3673,38 +3673,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hardhat-boilerplate@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "hardhat-boilerplate@workspace:."
-  dependencies:
-    "@nomicfoundation/hardhat-chai-matchers": ^1.0.6
-    "@nomicfoundation/hardhat-network-helpers": ^1.0.8
-    "@nomicfoundation/hardhat-toolbox": ^2.0.2
-    "@nomiclabs/hardhat-ethers": ^2.2.3
-    "@nomiclabs/hardhat-etherscan": ^3.1.7
-    "@nomiclabs/hardhat-solhint": ^3.0.1
-    "@primitivefi/hardhat-dodoc": ^0.2.3
-    "@typechain/ethers-v5": ^10.2.1
-    "@typechain/hardhat": ^6.1.6
-    "@types/chai": ^4.3.5
-    "@types/mocha": ^10.0.1
-    "@types/node": ^20.1.2
-    chai: ^4.3.7
-    dotenv: ^16.0.3
-    ethers: ^5.7.2
-    hardhat: ^2.14.0
-    hardhat-contract-sizer: ^2.8.0
-    hardhat-gas-reporter: ^1.0.9
-    prettier: ^2.8.8
-    prettier-plugin-solidity: ^1.1.3
-    solhint-plugin-prettier: ^0.0.5
-    solidity-coverage: ^0.8.2
-    ts-node: ^10.9.1
-    typechain: ^8.1.1
-    typescript: ^5.0.4
-  languageName: unknown
-  linkType: soft
-
 "hardhat-contract-sizer@npm:^2.8.0":
   version: 2.8.0
   resolution: "hardhat-contract-sizer@npm:2.8.0"
@@ -6277,6 +6245,38 @@ __metadata:
   checksum: b5167a7142c1da704c0e3af85c402002b597081dd9575031a90b4f229ca5678e9a36e8a374f1814c8156a725d17008ae3bde63b92f9cfd132526379e580bec8b
   languageName: node
   linkType: hard
+
+"smart-contracts-development-boilerplate@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "smart-contracts-development-boilerplate@workspace:."
+  dependencies:
+    "@nomicfoundation/hardhat-chai-matchers": ^1.0.6
+    "@nomicfoundation/hardhat-network-helpers": ^1.0.8
+    "@nomicfoundation/hardhat-toolbox": ^2.0.2
+    "@nomiclabs/hardhat-ethers": ^2.2.3
+    "@nomiclabs/hardhat-etherscan": ^3.1.7
+    "@nomiclabs/hardhat-solhint": ^3.0.1
+    "@primitivefi/hardhat-dodoc": ^0.2.3
+    "@typechain/ethers-v5": ^10.2.1
+    "@typechain/hardhat": ^6.1.6
+    "@types/chai": ^4.3.5
+    "@types/mocha": ^10.0.1
+    "@types/node": ^20.1.2
+    chai: ^4.3.7
+    dotenv: ^16.0.3
+    ethers: ^5.7.2
+    hardhat: ^2.14.0
+    hardhat-contract-sizer: ^2.8.0
+    hardhat-gas-reporter: ^1.0.9
+    prettier: ^2.8.8
+    prettier-plugin-solidity: ^1.1.3
+    solhint-plugin-prettier: ^0.0.5
+    solidity-coverage: ^0.8.2
+    ts-node: ^10.9.1
+    typechain: ^8.1.1
+    typescript: ^5.0.4
+  languageName: unknown
+  linkType: soft
 
 "socks-proxy-agent@npm:^7.0.0":
   version: 7.0.0
